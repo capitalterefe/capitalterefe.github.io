@@ -36,7 +36,7 @@ function getBodyContent(objectList, primary, secondaryLeft, secondaryRight, text
   return htmlString + '<div class="entry-end"></div>';
 };
 
-
+/*
 var research = [{
   prof: 'Siddhartha Banerjee',
   date: 'January 2016 - Present', 
@@ -54,7 +54,7 @@ var research = [{
     '<li>Coauthorship in upcoming paper </li>' +
     '</ul>'
 }];
-
+*/
 var work = [{
   company: '<a href="https://www.actionet.com/" target="__blank">Actionet</a>',
   date: 'July 2016 - Current', 
@@ -72,7 +72,7 @@ var work = [{
     '<li> Developed  automated management soloution  for Order Management System</li>' +
     '</ul>'
 }];
-
+/*
 var projects = [{
   title: 'Spatiotemporal Models for Crime Rate',
   date: 'June 2016 - September 2016', 
@@ -99,7 +99,7 @@ var projects = [{
   language: 'C',
   descrip: 'Built network honeypot for multicore MIPS machine capable of 40 Mbps network traffic (class average around 5-10)'
 }]
-
+*/
 /*
 document.getElementById('research').innerHTML = 
   htmlTitleString('Research') +
