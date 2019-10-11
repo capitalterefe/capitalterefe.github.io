@@ -56,20 +56,20 @@ var research = [{
 }];
 
 var work = [{
-  company: '<a href="https://www.uber.com/" target="__blank">Uber Technologies Inc</a>',
-  date: 'June 2016 - August 2016', 
-  position: 'Software Engineering Intern',
+  company: '<a href="https://www.actionet.com/" target="__blank">Actionet</a>',
+  date: 'July 2016 - Current', 
+  position: 'Software Automation Engineering',
   descrip: '<ul>'+
-    '<li>Worked on internal endpoint and routing monitoring tools for Marketplace Gateway team</li>' +
-    '<li>Built routing mechanism to allow dynamic configuration of downstream clients in testing</li>'+
+    '<li>Worked on Automation of End to End Integration and CI/CD pipeline for Case Management  team</li>' +
+    '<li>Built Continous testing  mechanism to allow dynamic configuration of downstream clients in testing</li>'+
     '</ul>'
 },{
-  company: '<a href="http://www.hudson-trading.com/" target="__blank">Hudson River Trading LLC</a>',
-  date: 'January 2016',
-  position: 'Algo Development and Core Intern',
+  company: '<a href="http://www.homedepot.com/" target="__blank">The Home Depot</a>',
+  date: 'Feb  2016',
+  position: 'Automation Engineer',
   descrip: '<ul> ' +
     '<li> Built data structures for tracking order book price levels' +
-    '<li> Developed profitable automated trading strategy for Brazilian equities</li>' +
+    '<li> Developed  automated management soloution  for Order Management System</li>' +
     '</ul>'
 }];
 
@@ -100,17 +100,18 @@ var projects = [{
   descrip: 'Built network honeypot for multicore MIPS machine capable of 40 Mbps network traffic (class average around 5-10)'
 }]
 
+/*
 document.getElementById('research').innerHTML = 
   htmlTitleString('Research') +
   getBodyContent(research,'kind', 'prof', 'date', 'descrip');
 
-document.getElementById('work').innerHTML = 
-  htmlTitleString('Work') +
-  getBodyContent(work,'company', 'position', 'date', 'descrip');
-
 document.getElementById('projects').innerHTML = 
   htmlTitleString('Projects') +
   getBodyContent(projects,'title', 'language', 'date', 'descrip');
+*/
+document.getElementById('work').innerHTML =
+  htmlTitleString('Work') +
+  getBodyContent(work,'company', 'position', 'date', 'descrip');
 
 
 
