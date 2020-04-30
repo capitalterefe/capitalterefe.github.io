@@ -56,9 +56,17 @@ var research = [{
 }];
 */
 var work = [{
+  company: '<a href="https://www.boozeallen.com/" target="__blank">Booze Allen Hamilton</a>',
+  date: 'Mar 2020 - Current', 
+  position: 'Cloud Engineer',
+  descrip: '<ul>'+
+    '<li>Cloud Infrastructure Support and Maintenance </li>' +
+    '<li>Process Automation</li>'+
+    '</ul>'
+},{
   company: '<a href="https://www.actionet.com/" target="__blank">Actionet</a>',
-  date: 'July 2016 - Current', 
-  position: 'Software Automation Engineering',
+  date: 'July 2016 - Mar 2020', 
+  position: 'Infrastructure Automation Engineer',
   descrip: '<ul>'+
     '<li>Worked on Automation of End to End Integration and CI/CD pipeline for Case Management  team</li>' +
     '<li>Built Continous testing  mechanism to allow dynamic configuration of downstream clients in testing</li>'+
