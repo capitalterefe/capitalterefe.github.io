@@ -74,7 +74,7 @@ var work = [{
 },{
   company: '<a href="http://www.homedepot.com/" target="__blank">The Home Depot</a>',
   date: 'Feb  2016',
-  position: 'Automation Engineer',
+  position: 'Software Engineer',
   descrip: '<ul> ' +
     '<li> Built data structures for tracking order book price levels' +
     '<li> Developed  automated management soloution  for Order Management System</li>' +
