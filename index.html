@@ -1,131 +1,16 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <!-- <link rel="icon" href="favicon.ico"> -->
-
-  <title> Capital Terefe </title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Terefe - Enterprise ERP platform for modern agriculture. Manage crops, livestock, inventory, and supply chain with AI-powered insights and real-time visibility." />
+    <meta name="keywords" content="agriculture ERP, farm management, livestock management, inventory management, agricultural software, agribusiness" />
+    <title>Terefe - Agricultural ERP Platform</title>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body>
+    <div id="root"></div>
 
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-      <!-- Icon for navigation on mobile -->
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-
-  <!-- container for main text -->
-  <div class="main">
-    <div id="about" class="section about full-page">
-      <div class='vertical-align'>
-        <div class="header intro">Hi, I'm Capital Terefe </div>
-        <div class="intro-text">
-          <p> I like to call myself Infrastructure Automation Engineer, which means I enjoy automating and solving real world problems. In the last few years, I've done system automation in various infrastructures (AWS,Linux,WINDOWS) helping organizations in Configuring, Versioning, Packaging, Deploying, Running, and Monitoring  software in a fully automated way! 
-          </p>
-          <p> <a href="#work" id="scrolldown">Scroll down to see more. </a> </p>
-        </div>
-      </div>
-    </div>
-    <div id="work" class="section entries">
-    </div>
-    <div id="research" class="section entries">
-    </div>
-    <div id="projects" class="section entries">
-    </div>
-    <div id="contact" class="section full-page">
-      <div class='vertical-align'>
-        <div class="header intro">Contact Me </div>
-        <div class="intro-text">
-          I'm always looking for interesting work. If you think we have similar interests, feel free to reach out. I respond best to email (capital.terefe <at> gmail.com).
-          You can also check out my <a href="https://www.linkedin.com/in/capitalterefe" target="__blank">LinkedIn</a>, or my <a href="https://github.com/capitalterefe">Github</a>.
-        </div>
-      </div>
-    </div>
-  </div> <!-- /container -->
-
-
-  <!-- Bootstrap core JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script src="./main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script>
-    $("#navbar a").on('click', function(event){
-
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-        // Store hash (#)
-        var hash = this.hash;
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area (the speed of the animation)
-        $('html, body').animate(
-          {
-            scrollTop: $(hash).offset().top
-          }, 400, function(){
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          }); // End if statement
-      };
-    });
-    $("#scrolldown").on('click', function(event){
-
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-        // Store hash (#)
-        var hash = this.hash;
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area (the speed of the animation)
-        $('html, body').animate(
-          {
-            scrollTop: $(hash).offset().top
-          }, 400, function(){
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          }); // End if statement
-      };
-    });
-  </script>
+    <script type="module" src="/client/App.tsx"></script>
   </body>
 </html>
