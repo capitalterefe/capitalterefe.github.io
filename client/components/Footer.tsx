@@ -25,7 +25,7 @@ export default function Footer() {
               <span className="text-lg font-bold">Terefe</span>
             </div>
             <p className="text-white/70 text-sm">
-              Enterprise ERP platform for modern agriculture
+              Smart farming solutions for modern agriculture
             </p>
           </div>
 
@@ -83,60 +83,29 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
+            <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
-                <a href="#" className="hover:text-white transition">
-                  Privacy Policy
+                <a href="mailto:info@terefe.com" className="hover:text-white transition">
+                  info@terefe.com
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
-                  Terms of Service
-                </a>
+                <Link to="/contact" className="hover:text-white transition">
+                  Contact Us
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition">
-                  Cookie Policy
+                  Support
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-white/60">
-            © {currentYear} AgriAI. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
       </div>
     </footer>
   );
