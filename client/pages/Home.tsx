@@ -301,22 +301,12 @@ export default function Home() {
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
               Join farmers who are already using Terefe to make better decisions and improve their operations
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-block px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-white/90 transition"
-              >
-                Get Started
-              </Link>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-3 bg-white/20 text-white font-semibold rounded-lg border border-white/40 hover:bg-white/30 transition"
-              >
-                Learn More
-              </a>
-            </div>
+            <Link
+              to="/contact"
+              className="inline-block px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-white/90 transition"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       </section>
