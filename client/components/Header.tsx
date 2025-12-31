@@ -43,14 +43,12 @@ export default function Header() {
 
         {/* CTA Button - Desktop */}
         <div className="hidden md:flex items-center gap-4">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/contact"
             className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-opacity-90 transition"
           >
             Get Started
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -98,14 +96,13 @@ export default function Header() {
             >
               Contact
             </Link>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contact"
               className="w-full px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-opacity-90 transition text-center"
+              onClick={() => setIsOpen(false)}
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       )}
