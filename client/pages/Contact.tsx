@@ -99,36 +99,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Social / Additional Info */}
-          <div className="max-w-2xl mx-auto mt-12 text-center">
-            <h3 className="font-bold text-foreground mb-4">Follow Us</h3>
-            <div className="flex gap-4 justify-center">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-2 bg-foreground/10 text-foreground rounded-lg hover:bg-foreground/20 transition"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-2 bg-foreground/10 text-foreground rounded-lg hover:bg-foreground/20 transition"
-              >
-                LinkedIn
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-2 bg-foreground/10 text-foreground rounded-lg hover:bg-foreground/20 transition"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
