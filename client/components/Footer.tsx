@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-white mt-20">
+    <footer className="bg-foreground dark:bg-slate-950 text-white mt-20">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -24,7 +24,7 @@ export default function Footer() {
               </div>
               <span className="text-lg font-bold">Terefe</span>
             </div>
-            <p className="text-white/70 text-sm">
+            <p className="text-white/70 dark:text-slate-400 text-sm">
               Smart farming solutions for modern agriculture
             </p>
           </div>
@@ -32,24 +32,24 @@ export default function Footer() {
           {/* Product */}
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
-            <ul className="space-y-2 text-sm text-white/70">
+            <ul className="space-y-2 text-sm text-white/70 dark:text-slate-400">
               <li>
-                <Link to="/solutions" className="hover:text-white transition">
+                <Link to="/solutions" className="hover:text-white dark:hover:text-slate-200 transition">
                   Solutions
                 </Link>
               </li>
               <li>
-                <a href="#features" className="hover:text-white transition">
+                <a href="#features" className="hover:text-white dark:hover:text-slate-200 transition">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-white transition">
+                <a href="#pricing" className="hover:text-white dark:hover:text-slate-200 transition">
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-white dark:hover:text-slate-200 transition">
                   Documentation
                 </a>
               </li>
@@ -59,24 +59,24 @@ export default function Footer() {
           {/* Company */}
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-sm text-white/70">
+            <ul className="space-y-2 text-sm text-white/70 dark:text-slate-400">
               <li>
-                <Link to="/about" className="hover:text-white transition">
+                <Link to="/about" className="hover:text-white dark:hover:text-slate-200 transition">
                   About
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-white dark:hover:text-slate-200 transition">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-white dark:hover:text-slate-200 transition">
                   Careers
                 </a>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition">
+                <Link to="/contact" className="hover:text-white dark:hover:text-slate-200 transition">
                   Contact
                 </Link>
               </li>
@@ -86,19 +86,19 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm text-white/70">
+            <ul className="space-y-2 text-sm text-white/70 dark:text-slate-400">
               <li>
-                <a href="mailto:info@terefe.com" className="hover:text-white transition">
+                <a href="mailto:info@terefe.com" className="hover:text-white dark:hover:text-slate-200 transition">
                   info@terefe.com
                 </a>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition">
+                <Link to="/contact" className="hover:text-white dark:hover:text-slate-200 transition">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-white dark:hover:text-slate-200 transition">
                   Support
                 </a>
               </li>
