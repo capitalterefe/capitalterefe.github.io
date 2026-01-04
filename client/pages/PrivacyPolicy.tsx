@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { policies } from "@/data/policies";
 import { ChevronRight } from "lucide-react";
+import React from "react";
 
 export default function PrivacyPolicy() {
   const { appName, section = "privacy" } = useParams<{
@@ -172,38 +173,8 @@ export default function PrivacyPolicy() {
 
           {/* Content */}
           <div className="lg:col-span-3">
-            <div className="prose dark:prose-invert max-w-none">
-              <style>{`
-                .prose h1 {
-                  @apply text-3xl md:text-4xl font-bold text-foreground dark:text-white mb-6;
-                }
-                .prose h2 {
-                  @apply text-2xl font-bold text-foreground dark:text-white mt-8 mb-4;
-                }
-                .prose h3 {
-                  @apply text-xl font-bold text-foreground dark:text-white mt-6 mb-3;
-                }
-                .prose p {
-                  @apply text-foreground/80 dark:text-slate-300 mb-4 leading-relaxed;
-                }
-                .prose ul, .prose ol {
-                  @apply mb-4 ml-6;
-                }
-                .prose li {
-                  @apply text-foreground/80 dark:text-slate-300 mb-2;
-                }
-                .prose strong {
-                  @apply font-bold text-foreground dark:text-white;
-                }
-                .prose code {
-                  @apply bg-muted dark:bg-slate-800 px-2 py-1 rounded text-primary dark:text-primary;
-                }
-              `}</style>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: formatMarkdown(currentSection.content),
-                }}
-              />
+            <div className="max-w-none space-y-6">
+              {renderMarkdown(currentSection.content)}
             </div>
 
             {/* Footer Info */}
@@ -222,25 +193,103 @@ export default function PrivacyPolicy() {
   );
 }
 
-// Simple markdown to HTML converter
-function formatMarkdown(markdown: string): string {
-  let html = markdown
-    .trim()
-    // Headers
-    .replace(/^### (.*?)$/gm, "<h3>$1</h3>")
-    .replace(/^## (.*?)$/gm, "<h2>$1</h2>")
-    .replace(/^# (.*?)$/gm, "<h1>$1</h1>")
-    // Bold
-    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-    // Italic
-    .replace(/\*(.*?)\*/g, "<em>$1</em>")
-    // Lists
-    .replace(/^\- (.*?)$/gm, "<li>$1</li>")
-    .replace(/(<li>.*<\/li>)/s, "<ul>$1</ul>")
-    .replace(/^\d+\. (.*?)$/gm, "<li>$1</li>")
-    // Line breaks
-    .replace(/\n\n/g, "</p><p>")
-    .replace(/\n/g, "<br/>");
+// Render markdown content as React components
+function renderMarkdown(markdown: string) {
+  const lines = markdown.trim().split("\n");
+  const elements: React.ReactNode[] = [];
+  let currentList: string[] = [];
+  let listType: "ul" | "ol" | null = null;
 
-  return `<p>${html}</p>`;
+  const flushList = () => {
+    if (currentList.length > 0) {
+      const ListTag = listType === "ol" ? "ol" : "ul";
+      elements.push(
+        <ListTag key={`list-${elements.length}`} className="mb-4 ml-6 space-y-2">
+          {currentList.map((item, idx) => (
+            <li key={idx} className="text-foreground/80 dark:text-slate-300">
+              {item}
+            </li>
+          ))}
+        </ListTag>
+      );
+      currentList = [];
+      listType = null;
+    }
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    // Skip empty lines
+    if (!trimmed) {
+      flushList();
+      continue;
+    }
+
+    // Headers
+    if (trimmed.startsWith("# ")) {
+      flushList();
+      const text = trimmed.replace(/^#+\s/, "");
+      elements.push(
+        <h1 key={`h1-${i}`} className="text-3xl md:text-4xl font-bold text-foreground dark:text-white mb-6 mt-8">
+          {text}
+        </h1>
+      );
+      continue;
+    }
+
+    if (trimmed.startsWith("## ")) {
+      flushList();
+      const text = trimmed.replace(/^#+\s/, "");
+      elements.push(
+        <h2 key={`h2-${i}`} className="text-2xl font-bold text-foreground dark:text-white mb-4 mt-8">
+          {text}
+        </h2>
+      );
+      continue;
+    }
+
+    if (trimmed.startsWith("### ")) {
+      flushList();
+      const text = trimmed.replace(/^#+\s/, "");
+      elements.push(
+        <h3 key={`h3-${i}`} className="text-xl font-bold text-foreground dark:text-white mb-3 mt-6">
+          {text}
+        </h3>
+      );
+      continue;
+    }
+
+    // Unordered lists
+    if (trimmed.startsWith("- ")) {
+      if (listType !== "ul") {
+        flushList();
+        listType = "ul";
+      }
+      currentList.push(trimmed.substring(2));
+      continue;
+    }
+
+    // Ordered lists
+    if (/^\d+\.\s/.test(trimmed)) {
+      if (listType !== "ol") {
+        flushList();
+        listType = "ol";
+      }
+      currentList.push(trimmed.replace(/^\d+\.\s/, ""));
+      continue;
+    }
+
+    // Regular paragraph
+    flushList();
+    elements.push(
+      <p key={`p-${i}`} className="text-foreground/80 dark:text-slate-300 mb-4 leading-relaxed">
+        {trimmed}
+      </p>
+    );
+  }
+
+  flushList();
+  return elements;
 }
