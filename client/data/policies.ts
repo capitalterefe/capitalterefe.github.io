@@ -24,7 +24,7 @@ export const policies: Record<string, AppPolicy> = {
 # Privacy Policy - Zenfast
 
 ## Introduction
-This Privacy Policy describes how your information is collected, used, and disclosed by ZenFast ('we', 'us', or 'our') when you use our mobile application (the 'App')."
+This Privacy Policy describes how your information is collected, used, and disclosed by ZenFast ('we', 'us', or 'our') when you use our mobile application (the 'App').
 
 ## Information We Collect
 We do not collect any personally identifiable information from you. All fasting data you enter into the App is stored locally on your device and, if enabled by you, synced to your private iCloud account. We do not have access to this data.
@@ -33,7 +33,6 @@ Analytics: We use anonymized analytics to understand how our App is used, improv
 
 ## How We Use Your Information
 Since we do not collect any personal information, we do not use your information for any purpose other than to provide and improve the functionality of the App. Anonymized analytics data is used solely for product development and performance monitoring.
-
 
 ## Data Storage and Security
 All your fasting sessions and personal settings are stored exclusively on your device. If you enable iCloud synchronization, your data is stored in your personal iCloud account, managed by Apple. We do not have access to your iCloud data. We implement reasonable security measures to protect the data stored on your device from unauthorized access.
@@ -77,5 +76,85 @@ These Terms and Conditions are governed by and construed in accordance with the 
         `,
       },
     },
-  },       
+  },
+  app2: {
+    id: "app2",
+    name: "App 2",
+    version: "1.0.0",
+    lastUpdated: "January 4, 2024",
+    sections: {
+      privacy: {
+        title: "Privacy Policy",
+        content: `
+# Privacy Policy - App 2
+
+## Introduction
+At Terefe, we respect your privacy and are committed to protecting your personal data. This Privacy Policy describes how we collect and process your information in App 2.
+
+## Data Collection
+App 2 collects the following types of data:
+- Account information (name, email, password)
+- Profile information (company, role, preferences)
+- Usage analytics
+- Device and browser information
+- IP address and location data
+
+## Data Usage
+Your data is used to:
+- Provide and improve the App 2 service
+- Personalize your experience
+- Send you important updates and notifications
+- Comply with legal obligations
+- Prevent fraud and abuse
+
+## Your Rights
+You have the right to:
+- Access your personal data
+- Correct inaccurate data
+- Request deletion of your data
+- Opt-out of marketing communications
+- Data portability
+
+## Data Retention
+We retain your personal data for as long as necessary to provide the service or as required by law. You may request deletion at any time.
+
+## Contact
+For privacy inquiries, contact us at privacy@terefe.us
+        `,
+      },
+      "privacy-eu": {
+        title: "GDPR Compliance",
+        content: `
+# GDPR Compliance - App 2
+
+## Legal Basis
+We process personal data on the following legal bases:
+- Consent (where applicable)
+- Contract performance
+- Legal obligations
+- Legitimate interests
+- Vital interests
+- Public task
+
+## Data Processing Agreement
+If you are an EU resident, we have a Data Processing Agreement in place that governs how we handle your data in compliance with GDPR.
+
+## Data Transfers
+Personal data is primarily stored within the EU. Any transfers outside the EU are conducted with appropriate safeguards.
+
+## Your GDPR Rights
+- Right to access
+- Right to rectification
+- Right to erasure
+- Right to restrict processing
+- Right to data portability
+- Right to object
+- Rights related to automated decision-making
+
+## Data Protection Officer
+For GDPR inquiries, you can contact our Data Protection Officer at dpo@terefe.us
+        `,
+      },
+    },
+  },
 };
