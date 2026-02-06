@@ -39,7 +39,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold text-foreground dark:text-white mb-4">Our Mission</h3>
               <p className="text-foreground/70 dark:text-slate-400">
-                To empower farmers with accessible and intelligent agricultural technology that improves productivity while conserving natural resources.
+                To empower farmers with accessible and intelligent agricultural technology that improves productivity while conserving natural resources.Blen
               </p>
             </div>
 
